@@ -22,10 +22,13 @@ public class Main
             {
                 System.out.println("Lower Berth Given");
                 //call booking function in the TicketBooker class
+                // lowerberthspositions.get(0) means in lowerberth zero index number
                 booker.bookTicket(p,(Ticketbooker.lowerBerthsPositions.get(0)),"L");
                 //remove the booked position from available positions and also decrease available seats of that
                 // particular type
+                //if ticket booked, don't show again zero index available ticket number so wrote code remove
                 Ticketbooker.lowerBerthsPositions.remove(0);
+                //available lower ticket booked, so decreased one ticket from lowerberth
                 Ticketbooker.availableLowerBerths--;
 
 
@@ -132,7 +135,7 @@ public class Main
                 case 1:
                 {
                     //get details from Passenger
-                    System.out.println("Enter Passenger name,age and berth preference (L,M or U)");
+                    System.out.println("Enter Passenger Name,Age and Berth preference (L,M or U)");
                     String name = s.next();
                     int age = s.nextInt();
                     //get berth preference (L,U,M)
